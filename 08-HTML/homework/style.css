@@ -1,0 +1,19 @@
+h1 {
+    color: darkseagreen;
+}
+img {
+    width: 400px;
+    height: 400px;
+}
+#thirdDiv {
+    width: 500px;
+    /* height:600px; queda corto */
+    height:800px;
+    background-color: darkviolet;
+    padding: 50px;
+    border: 5px solid red;
+}
+.spanId {
+    font-size: 18px;
+    margin: 50px;
+}
