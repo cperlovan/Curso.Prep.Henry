@@ -254,6 +254,7 @@ function esVocal(letra){
       respuesta = "Dato incorrecto"
   } else{
     respuesta = "Dato incorrecto"
+  
   }
 
   return respuesta
