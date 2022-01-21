@@ -7,14 +7,14 @@ function obtenerMayor(x, y) {
   // Tu código:
    let mayor = 0
   if (x === y ){
-    mayor = x 
+    mayor = x || y
   } else if (x > y){
     mayor = x
   }else{
     mayor = y
   }
   return mayor
-  
+
 }
 function mayoriaDeEdad(edad) {
   //Determinar si la persona según su edad puede ingresar a un evento.
@@ -39,11 +39,11 @@ function conection(status) {
 
   let usr;
   if (status === 1){
-    usr = "Online"
+    usr = "Online";
   }else if (status === 2){
-    usr = "Away"
+    usr = "Away";
   }else{
-    usr = "Offline"
+    usr = "Offline";
   }
   return usr
 }
@@ -58,13 +58,13 @@ function saludo(idioma) {
 
   let i
   if (idioma === "aleman"){
-    i = "Guten Tag!"
+    i = "Guten Tag!";
   }else if (idioma === "mandarin"){
-    i = "Ni Hao!"
+    i = "Ni Hao!";
   }else if (idioma === "ingles"){
-    i = "Hello!"
+    i = "Hello!";
   }else{
-    i = "Hola!"
+    i = "Hola!";
   }
    return i
 }
@@ -81,20 +81,20 @@ function colors(color) {
   let col
   switch (color) {
     case "blue":
-      col = "This is blue"
+      col = "This is blue";
       break;
       case "red":
-        col = "This is red"
-        break;
+      col = "This is red";
+      break;
       case "green":
-      col = "This is green"
+      col = "This is green";
       break;
       case "orange":
-      col = "This is orange"
+      col = "This is orange";
       break;
   
     default:
-      col = "Color not found"
+      col = "Color not found";
       break;
   }
   return col
@@ -139,13 +139,15 @@ function esEntero(numero) {
   // Tu código:
 
   let num 
-  if(Number.isInteger(numero)){
+  if(numero === Math.floor(numero)){
       num = true
   }else{
       num = false
   }
   return num
 }
+
+
 
 function fizzBuzz(numero) {
   // Si "numero" es divisible entre 3, devuelve "fizz"
@@ -155,11 +157,11 @@ function fizzBuzz(numero) {
 
   let tipo
   if(numero % 5 === 0 && numero % 3 === 0) {
-    tipo = "fizzbuzz"
+    tipo = "fizzbuzz";
     }else if(numero % 3 === 0){
-      tipo = "fizz"
+      tipo = "fizz";
     }else if(numero % 5 === 0){
-      tipo = "buzz"
+      tipo = "buzz";
     }else{ 
       tipo = numero
     }
@@ -174,9 +176,20 @@ function operadoresLogicos(num1, num2, num3) {
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false.
   
-  if(num1 > num2 && num1 > num3 && num1 >0){
+  let prim
 
-   }
+    if (num1 < 0 || num2 < 0 || num3 < 0){
+      prim = "Hay negativos";
+    }else if( num1 === 0 || num2 === 0 || num3 === 0 ){
+      prim =  "Error";
+    }else if(num1 > num2 && num1 > num3 && num1 > 0){
+      prim =  "Número 1 es mayor y positivo" 
+    } else if(num3 > num1 && num3 > num2){
+      prim =  num3 + 1;
+    }else{
+    prim =  false;
+    }
+    return prim;
 }
 
 function esPrimo(numero) {
@@ -186,31 +199,46 @@ function esPrimo(numero) {
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
   
-  let primo;
-  if(numero % numero === 0 || numero / numero === numero || numero > 0){
-    primo = numero;
-  }else{
-    primo = false;
+  if (numero < 2) return false;
+  for( let i = 2; i <  numero; i++){
+    if (numero % i === 0 ) return false;
   }
+
+ return true;
 }
 
 function esVerdadero(valor){
-  //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
+  //Escribe una función que reciba un valor booleano y retorne 
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
-
+    if (valor === true){
+      return "Soy verdadero" 
+    } else {
+      return "Soy falso";
+    }
 }
 
 function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
-  
+  let multiplo = [];
+  let n;
+  for( let i = 0; i <=  10; i++){
+    multiplo.push(6 * i);
+  }
+    return multiplo
 }
 
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
+
+  if ( numero < 1000 && numero > 99){
+    return true;
+  }else {
+    return false;
+  }
   
 }
 
@@ -218,6 +246,14 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
+  let i = 0;
+  //let numero = 0 ;  
+  do{
+     i = i+1
+     numero = numero + 5;
+  }while(i < 8)
+
+  return numero;
 }
 
 
