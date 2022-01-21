@@ -24,7 +24,7 @@ function mayoriaDeEdad(edad) {
   let m 
   if (edad >= 18){
     m = "Allowed"
-  } else if(edad <= 18){
+  } else if(edad < 18){
     m = "Not allowed"
   }
   return m
