@@ -236,7 +236,7 @@ function breakStatement(numero) {
 
   var arr =[]
   var suma = numero;
-  for(var i =0; i < 10; i ++){
+  for(var i =0; i < 10; i++){
     suma = suma + 2;
     if (suma === i) break
     else{
