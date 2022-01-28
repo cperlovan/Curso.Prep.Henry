@@ -14,7 +14,7 @@ function deObjetoAmatriz(objeto){
   // return Object.entries(objeto);
   const array = [];
 
-  for (const clave in objeto ){
+  for(const clave in objeto ){
     array.push([clave, objeto[clave]])
   };
    
@@ -42,7 +42,7 @@ function numberOfCharacters(string) {
    obj[string[i]] = obj[string[i]] + 1
    continue;
   }
-  obj[string[i]]=1
+  obj[string[i]] = 1
  
 }
   return obj;
@@ -57,7 +57,7 @@ function capToFront(s) {
   const mayusculas = [];
   const minusculas = [];
 
-  for(let i = 0; i < s.length; i++){
+  for (let i = 0; i < s.length; i++){
     if(s[i] === s[i].toUpperCase()) mayusculas.push(s[i]);
     else minusculas.push(s[i]);
   }
@@ -77,13 +77,9 @@ return str.split(" ").map(function(palabras){
   return palabras.split("").reverse().join("")
 }).join(' ');
 
-
 }
 
   
-
-
-
 function capicua(numero){
   //Escribe una función, la cual recibe un número y determina si es o no capicúa.
   //La misma debe retornar: "Es capicua" si el número se número que se lee igual de 
@@ -96,7 +92,6 @@ function capicua(numero){
   numero2= numero.split("").reverse().join("");
   if (numero === numero2) return "Es capicua";
   return "No es capicua";
-
 }
 
 
@@ -119,6 +114,7 @@ function sortArray(arr) {
   //La función recibe una matriz de strings. Ordena la matriz en orden creciente de longitudes de cadena
   //Ej: Recibe ---> ["You", "are", "beautiful", "looking"] || Devuelve ---> [“You", "are", "looking", "beautiful"]
   //Escribe tu código aquí
+
 
   var nuevoArray = arr.sort(function(a,b){
     return a.length - b.length
@@ -145,8 +141,6 @@ function buscoInterseccion(arreglo1, arreglo2){
   }
   return arreglo;
 }
-
-
 
 // No modificar nada debajo de esta línea
 // --------------------------------
