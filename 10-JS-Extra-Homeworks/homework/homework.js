@@ -139,7 +139,7 @@ function buscoInterseccion(arreglo1, arreglo2){
       }
     }
   }
-  return arreglo;
+  return arreglo; 
 }
 
 // No modificar nada debajo de esta línea
